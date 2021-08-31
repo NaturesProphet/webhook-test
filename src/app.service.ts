@@ -1,4 +1,4 @@
-import { Injectable } from '@nestjs/common';
+import { Injectable, Logger } from '@nestjs/common';
 import { notifyDiscordSimpleMessage } from './DISCORD/notifications';
 
 @Injectable()
@@ -11,6 +11,9 @@ export class AppService {
       url: req.url
     }
     notifyDiscordSimpleMessage( log );
+    Logger.verbose( log );
+    console.log( '\n--------------------------------------------------' );
+
     return log;
   }
 }

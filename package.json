@@ -11,7 +11,9 @@
     "start": "nest start",
     "start:dev": "nest start --watch",
     "start:debug": "nest start --debug --watch",
-    "start:prod": "node dist/main"
+    "start:prod": "node dist/main",
+    "docker:build": "docker build -t mateusgarcia/webhook-test .",
+    "docker:push": "docker push mateusgarcia/webhook-test"
   },
   "dependencies": {
     "@nestjs/common": "^7.6.15",
